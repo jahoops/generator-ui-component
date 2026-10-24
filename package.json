@@ -1,0 +1,62 @@
+{
+  "name": "generator-ui-component",
+  "version": "2.2.0",
+  "description": "Scaffolds a UI Component with ES6, tests, and webpack+babel build.",
+  "homepage": "https://jack.ofspades.com",
+  "author": {
+    "name": "Jack",
+    "email": "jack@ofspades.com",
+    "url": "https://jack.ofspades.com"
+  },
+  "license": "CC-BY-SA-4.0",
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "yeoman-generator",
+    "ui-component",
+    "pattern"
+  ],
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "simple-git": "^1.31.0",
+    "wrench": "^1.5.8",
+    "yeoman-generator": "^0.22.5",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "commitizen": "^2.7.3",
+    "cz-conventional-changelog": "^1.1.5",
+    "gulp": "^3.9.1",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-git": "^1.7.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-nsp": "^2.3.1",
+    "gulp-plumber": "^1.1.0",
+    "nsp": "^2.2.1",
+    "standard": "^6.0.8",
+    "yeoman-assert": "^2.0.0"
+  },
+  "repository": "jacopotarantino/generator-ui-component",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "./node_modules/.bin/standard && ./node_modules/.bin/gulp",
+    "commit": "./node_modules/.bin/git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "standard": {
+    "ignore": [
+      "node_modules/"
+    ],
+    "globals": [
+      "browser", "element",
+      "describe", "it", "expect"
+    ]
+  }
+}
